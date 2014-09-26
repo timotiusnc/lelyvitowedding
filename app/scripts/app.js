@@ -9,4 +9,5 @@
  * Main module of the application.
  */
 angular
-  .module('lelyvitoweddingApp', []);
+  .module('lelyvitoweddingApp', [])
+  .constant('$', window.$);
