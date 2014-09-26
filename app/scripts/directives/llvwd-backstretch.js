@@ -11,9 +11,9 @@ angular.module('lelyvitoweddingApp')
     return {
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-        $timeout(function() {
+        
           $.backstretch("images/save-lg.png");
-        });
+        
       }
     };
   });
