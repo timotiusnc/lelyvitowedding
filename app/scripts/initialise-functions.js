@@ -94,7 +94,7 @@ function initialise_document_ready_functions()
     // ------ END: Owl Carousel ------    
 
     // initialise WOW.js intro animations
-    new WOW().init();
+    //new WOW().init();
 
     /* 
      * ----------------------------------------------------------
