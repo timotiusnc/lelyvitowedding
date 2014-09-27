@@ -6,7 +6,7 @@ do
  # do something on $file
  # convert $file -resize 66 gallery_sm_${i}.jpg
  # convert $file -resize 640 gallery_${i}.jpg
- convert $file -resize 160x160 -gravity center -extent 100x100 gallery_sm_${i}.jpg
+ convert $file -resize 250x250 -gravity center -extent 164x164 gallery_sm_${i}.jpg
  convert $file -resize 640 gallery_${i}.jpg
  echo "$file"
  echo "${i}"
