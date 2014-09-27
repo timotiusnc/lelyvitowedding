@@ -41,6 +41,7 @@ angular
       })
       .state('transportation', {
         url: '/transportation',
+        controller: 'TransportationCtrl',
         templateUrl: 'views/transportation.html',
         data: {pageTitle: 'Transportation' + LLVWD_TITLE}
       })
