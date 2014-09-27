@@ -131,21 +131,59 @@ angular.module('lelyvitoweddingApp')
           }
         ];
 
-        var receptionLatLng = new google.maps.LatLng(53.385873, -1.471471);
+        var akadLatLng = new google.maps.LatLng(-7.811642, 112.026139);
+        var akadPopup = new google.maps.InfoWindow({
+          content: '<div class="gmaps-popup">'+
+            '<p>Lokasi Akad</p>' + 
+            '<address>Jl. Masjid Al Huda 8<br>' +
+            'Kediri - Jawa Timur<br>' +
+            '<a href="https://maps.google.com/maps?q=Lokasi%20Akad%20Nikah%20Lely%26Vito!@-7.811642,112.026139" target="_blank">' +
+              'View on Google Maps' +
+            '</a>' +
+            '</div>'
+        });
+
+        var receptionLatLng = new google.maps.LatLng(-7.806795, 112.042286);
+        var receptionPopup = new google.maps.InfoWindow({
+          content: '<div class="gmaps-popup">'+
+            '<p>Lokasi Resepsi</p>' + 
+            '<address>Gedung Bhagawanta Bhari<br>' +
+            'Jl. Pamenang 1<br>' +
+            'Kediri - Jawa Timur<br>' +
+            '<a href="https://maps.google.com/maps?q=Lokasi%20Resepsi%20Nikah%20Lely%26Vito!@-7.806795,112.042286" target="_blank">' +
+              'View on Google Maps' +
+            '</a>' +
+            '</div>'
+        });
 
         var myOptions = {
-          zoom: 15,
+          zoom: 14,
           center: receptionLatLng,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           styles: mapStyle
         };
 
         var map = new google.maps.Map(document.getElementById('map'), myOptions);
-        var marker = new google.maps.Marker({
-            position: receptionLatLng,
-            map: map,
-            title:"Hello World!",
-            animation: google.maps.Animation.DROP
+        var akadMarker = new google.maps.Marker({
+          position: akadLatLng,
+          map: map,
+          title:"Lokasi Akad!",
+          animation: google.maps.Animation.DROP
+        });
+        var receptionMarker = new google.maps.Marker({
+          position: receptionLatLng,
+          map: map,
+          title:"Lokasi Resepsi!",
+          animation: google.maps.Animation.DROP
+        });
+
+        akadPopup.open(map, akadMarker);
+        receptionPopup.open(map, receptionMarker);
+        google.maps.event.addListener(receptionMarker, 'click', function() {
+          receptionPopup.open(map, receptionMarker);
+        });
+        google.maps.event.addListener(akadMarker, 'click', function() {
+          receptionPopup.open(map, akadMarker);
         });
       }
     };

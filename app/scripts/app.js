@@ -12,6 +12,7 @@ angular
   .module('lelyvitoweddingApp', [
     'ngAnimate',
     'ui.router',
+    'firebase',
     'angular-loading-bar',
     'angulartics',
     'angulartics.google.analytics'
@@ -37,6 +38,17 @@ angular
         url: '/location',
         templateUrl: 'views/location.html',
         data: {pageTitle: 'Location' + LLVWD_TITLE}
+      })
+      .state('transportation', {
+        url: '/transportation',
+        templateUrl: 'views/transportation.html',
+        data: {pageTitle: 'Transportation' + LLVWD_TITLE}
+      })
+      .state('rsvp', {
+        url: '/rsvp',
+        controller: 'RSVPCtrl',
+        templateUrl: 'views/rsvp.html',
+        data: {pageTitle: 'RSVP' + LLVWD_TITLE}
       });
   })
   .run(function($rootScope, $state) {
