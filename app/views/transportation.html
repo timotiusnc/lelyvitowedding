@@ -46,6 +46,8 @@
           </div>
         </div>
       </div>
+
+      <a ui-sref="rsvp" class="link-scroll btn btn-outline-inverse btn-lg">RSVP Now !</a>
     </div><!-- .col-sm-10 -->
   </div><!-- .content-wrapper -->
 
@@ -63,8 +65,13 @@
                 {{content.name}}
               </a>
             </li>
-            <br>
-            <small>Click on the route to navigate to the respective site</small>
+            <p ng-if="currentTransport === 'Plane'">
+              From Surabaya / Malang, you can use bus, shuttle (travel), bus, or rent a car to reach Kediri
+            </p>
+            <p ng-if="currentTransport === 'Train'">
+              From the station, you can use taxi or rent a car to reach the venue
+            </p>
+            <p><small>Click on the route to navigate to the respective site</small></p>
           </ul>
 
           <div ng-if="(currentTransport === 'Bus')">
@@ -110,6 +117,10 @@
                 </ul>
               </li>
             </ol>
+
+            <p>
+              From the bus terminal, you can use taxi or rent a car to reach the venue
+            </p>
           </div>
 
           <div ng-if="(currentTransport === 'Car')">
