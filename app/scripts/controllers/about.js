@@ -9,5 +9,6 @@
  */
 angular.module('lelyvitoweddingApp')
   .controller('AboutCtrl', function ($scope) {
-    
+    $scope.vito = 'Vito Ardhiyanto';
+    $scope.lely = 'Lely Mufika';
   });

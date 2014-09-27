@@ -56,6 +56,16 @@ angular
         templateUrl: 'views/about.html',
         data: {pageTitle: 'About Us' + LLVWD_TITLE}
       })
+      .state('aboutVito', {
+        url: '/about/vito',
+        templateUrl: 'views/about-vito.html',
+        data: {pageTitle: 'Vito\'s Story' + LLVWD_TITLE}
+      })
+      .state('aboutLely', {
+        url: '/about/lely',
+        templateUrl: 'views/about-lely.html',
+        data: {pageTitle: 'Lely\'s Story' + LLVWD_TITLE}
+      })
       .state('album', {
         url: '/album',
         controller: 'AlbumCtrl',
