@@ -1,14 +1,25 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="lelyvitoweddingApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title ng-bind="state.data.pageTitle"></title>
+    <meta name="description" content="October 11st 2014 | Gedung Bhagawanta Bhari - Kediri - Jawa Timur">
     <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="lely,mufika,sari,vito,ardhiyanto,lelyvitowedding">
+    <meta name="author" content="Lely Mufika Sari & Vito E. Ardhiyanto">
+    <meta property="fb:app_id" content="1464778593784872"/>
+    <meta property="og:site_name" content="The Wedding of Lely & Vito">
+    <meta property="og:author" content="Lely Mufika Sari & Vito E. Ardhiyanto">
+    <meta property="og:title"  content="The Wedding of Lely & Vito" /> 
+    <meta property="og:type"   content="website" /> 
+    <meta property="og:url"    content="http://lelyvitowedding.com/" /> 
+    <meta property="og:description" content="October 11st 2014 | Gedung Bhagawanta Bhari - Kediri - Jawa Timur">
+    <meta property="og:image"  content="http://lelyvitowedding.com/images/root/fb_share.jpg" /> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -16,7 +27,7 @@
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
   </head>
-  <body ng-app="lelyvitoweddingApp">
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -35,8 +46,8 @@
         <div id="mobile-menu-icon" class="visible-xs" onclick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
 
         <ul id="main-menu" class="menu_closed_on_xs">
-          <li id="menu-item-text" class="menu-item scroll active"><a href="#text">Home</a></li>
-          <li id="menu-item-carousel" class="menu-item scroll"><a href="#carousel">Invitation</a></li>
+          <li id="menu-item-text" class="menu-item scroll active"><a ui-sref="home">Home</a></li>
+          <li id="menu-item-carousel" class="menu-item scroll"><a ui-sref="invitation">Invitation</a></li>
           <li id="menu-item-grid" class="menu-item scroll"><a href="#grid">Location</a></li>
           <li id="menu-item-featured" class="menu-item scroll"><a href="#featured">Transportation</a></li>
           <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">RSVP</a></li>
@@ -45,23 +56,9 @@
         </ul><!-- #main-menu -->
       </section>
 
-      <section id="main-content" class="clearfix">
-        <article id="intro" class="section-wrapper clearfix">
-          <div class="content-wrapper clearfix wow fadeInDown animated" data-wow-delay="0.3s" style="position: absolute; visibility: visible; -webkit-animation: fadeInDown 0.3s;">
-            <div class="col-sm-10 col-md-9 pull-right">
-
-                <section class="feature-text">
-                  <div><img id="landing-img" class="img-responsive img-circle" src="images/himher.png"></div>
-                  <h1 class="people">Lely & Vito</h1>
-                  <h5>Saturday, October 11st 2014</h5>
-                  <p><a href="#text" class="link-scroll btn btn-outline-inverse btn-lg">find out more</a></p>
-                </section>
-
-            </div><!-- .col-sm-10 -->
-          </div><!-- .content-wrapper -->
-        </article>
+      <section id="main-content" class="clearfix" ui-view>
       </section>
-
+      
       <section id="footer">
         <!-- Go to Top -->
         <div id="go-to-top" onclick="scroll_to_top();" class="active"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
@@ -128,6 +125,26 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+    <script src="bower_components/SHA-1/sha1.js"></script>
+    <script src="bower_components/angulartics/src/angulartics.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-adobe.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-chartbeat.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-flurry.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-ga-cordova.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-ga.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-gtm.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-kissmetrics.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-mixpanel.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-piwik.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-scroll.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-segmentio.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-splunk.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-woopra.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-marketo.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
