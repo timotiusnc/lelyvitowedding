@@ -49,6 +49,18 @@ angular
         controller: 'RSVPCtrl',
         templateUrl: 'views/rsvp.html',
         data: {pageTitle: 'RSVP' + LLVWD_TITLE}
+      })
+      .state('about', {
+        url: '/about',
+        controller: 'AboutCtrl',
+        templateUrl: 'views/about.html',
+        data: {pageTitle: 'About Us' + LLVWD_TITLE}
+      })
+      .state('album', {
+        url: '/album',
+        controller: 'AlbumCtrl',
+        templateUrl: 'views/album.html',
+        data: {pageTitle: 'Album' + LLVWD_TITLE}
       });
   })
   .run(function($rootScope, $state) {
