@@ -32,6 +32,11 @@ angular
         url: '/invitation',
         templateUrl: 'views/invitation.html',
         data: {pageTitle: 'Invitation' + LLVWD_TITLE}
+      })
+      .state('location', {
+        url: '/location',
+        templateUrl: 'views/location.html',
+        data: {pageTitle: 'Location' + LLVWD_TITLE}
       });
   })
   .run(function($rootScope, $state) {

@@ -5,6 +5,7 @@
  */
 function initialise_document_ready_functions()
 {
+    console.log('asss');
     // useful variables (used in other functions)
     var section_wrappers = get_all_section_wrappers_in_page(); // get all the section wrappers in the page
     var amount_of_pixels_as_buffer_between_sections = 0.25 * ($(window).height()); // used in update_active_sections_on_scroll();
@@ -94,7 +95,7 @@ function initialise_document_ready_functions()
     // ------ END: Owl Carousel ------    
 
     // initialise WOW.js intro animations
-    //new WOW().init();
+    new WOW().init();
 
     /* 
      * ----------------------------------------------------------
@@ -147,7 +148,7 @@ function initialise_document_ready_functions()
 
 $(document).ready(function()
 {
-    initialise_document_ready_functions();
+    //initialise_document_ready_functions();
 });
 
  /* 
@@ -181,5 +182,5 @@ function initialise_window_load_functions()
 
 $(window).load(function()
 {
-    initialise_window_load_functions();
+    //initialise_window_load_functions();
 });
