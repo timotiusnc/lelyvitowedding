@@ -8,7 +8,7 @@
  * Controller of the lelyvitoweddingApp
  */
 angular.module('lelyvitoweddingApp')
-  .controller('TransportationCtrl', function ($scope) {
+  .controller('TransportationCtrl', function ($scope, $timeout) {
     $scope.plane = [
       {
         name: 'Jakarta - Surabaya',
@@ -138,7 +138,6 @@ angular.module('lelyvitoweddingApp')
     ];
 
     $scope.changeTransport = function(moda) {
-      console.log(moda);
       $scope.currentTransport = moda;
       if (moda === 'Plane') {
         $scope.contents = $scope.plane;
@@ -151,5 +150,13 @@ angular.module('lelyvitoweddingApp')
       } else if (moda === 'Hotel') {
         $scope.contents = $scope.hotel;
       }
+    };
+
+    $scope.changeModal = function(moda) {
+      $('#transport-modal').modal('hide');
+      $timeout(function() {
+        $scope.changeTransport(moda);
+        $('#transport-modal').modal('show');
+      }, 500);
     };
   });
