@@ -23,6 +23,19 @@ $icon-font-path: "../fonts/"
 @import "screens/rsvp"
 @import "screens/album"
 
+body
+  background: url('../images/save-sm.jpg') no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  @media (min-width: $screen-sm-min)
+    background: url('../images/save-lg.jpg') no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
 blockquote footer
   color: #ddd
 
