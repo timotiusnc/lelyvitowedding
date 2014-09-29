@@ -37,7 +37,7 @@ a:hover {
 p a {
     padding-bottom:1px;
     border-bottom:1px dotted rgba(255,255,255,0.4);
-    font-family: 'open_sansregular', sans-serif;
+    font-family: 'open_sansregular', $base-font, sans-serif;
 }
 p a:hover {
     border-color:#fff;
