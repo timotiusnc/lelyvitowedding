@@ -19,6 +19,7 @@ angular.module('lelyvitoweddingApp')
   .controller('llvwdThemeChangerCtrl', function($scope) {
     $scope.isActive = false;
     $scope.bgColor = 'white'; //default
+    $scope.menuColor = 'dark-blue';
     $scope.toggleThemeChanger = function() {
       $scope.isActive = !$scope.isActive;
     };
