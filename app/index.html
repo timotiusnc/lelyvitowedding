@@ -28,13 +28,14 @@
     <link rel="stylesheet" href="styles/lightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lato" rel="stylesheet" type="text/css">
   </head>
-  <body ng-class="state.name">
+  <body ng-class="[state.name, bgColor]">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <llvwd-backstretch></llvwd-backstretch>
+    <llvwd-theme-changer></llvwd-theme-changer>
     <div class="background-image-overlay"></div>
 
     <div id="outer-container">
@@ -176,6 +177,7 @@
         <script src="scripts/app.js"></script>
 
         <script src="scripts/directives/llvwd-backstretch.js"></script>
+        <script src="scripts/directives/llvwd-theme-changer.js"></script>
         <script src="scripts/directives/llvwd-reception-map.js"></script>
         <script src="scripts/directives/llvwd-lightbox.js"></script>
         <script src="scripts/directives/llvwd-fbcomment.js"></script>
