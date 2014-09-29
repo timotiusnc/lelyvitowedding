@@ -8,7 +8,6 @@
  * Controller of the lelyvitoweddingApp
  */
 angular.module('lelyvitoweddingApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.vito = 'Vito Ardhiyanto';
-    $scope.lely = 'Lely Mufika';
+  .controller('AboutCtrl', function ($scope, $state) {
+    $scope.comment = $state.params.comment;
   });

@@ -51,8 +51,13 @@ angular
         templateUrl: 'views/rsvp.html',
         data: {pageTitle: 'RSVP' + LLVWD_TITLE}
       })
+      .state('history', {
+        url: '/history',
+        templateUrl: 'views/timeline.html',
+        data: {pageTitle: 'Timeline' + LLVWD_TITLE}
+      })
       .state('about', {
-        url: '/about',
+        url: '/about?comment',
         controller: 'AboutCtrl',
         templateUrl: 'views/about.html',
         data: {pageTitle: 'About Us' + LLVWD_TITLE}

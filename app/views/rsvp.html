@@ -19,9 +19,9 @@
         </div>
       </div>
 
-      <div id="rsvp-form" ng-show="isLoggedIn && !isRSVPLoading">
+      <div id="rsvp-form" class="row rsvp-container" ng-show="isLoggedIn && !isRSVPLoading">
         <div class="col-md-12">
-          <form role="form" class="row">
+          <form role="form">
             <div class="form-group">
               <span ng-switch="user.provider">
                 <img ng-switch-when="facebook" ng-src="http://graph.facebook.com/{{user.id}}/picture?type=square"/>

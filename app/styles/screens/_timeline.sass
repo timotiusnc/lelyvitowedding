@@ -1,0 +1,57 @@
+#timeline
+  &.section-wrapper .content-wrapper
+    bottom: auto
+  #about-timeline
+    text-align: center
+  .text-muted
+    color: $foreground-color
+  .llv-timeline .timeline-panel
+    background: rgba(255,255,255,0.7)
+  .llv-timeline
+    .timeline-badge, p
+      font-family: 'open_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif
+    .timeline-badge
+      font-size: 15px
+      img
+        margin: 0
+  .timeline-badge
+    font-size: 1.2em
+  .timeline-year
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: bold
+    background: #d9534f
+    padding: 5px
+  .timeline-panel.panel-inverted
+    float: right
+  .timeline-panel.panel-inverted:before
+    right: auto
+    left: -15px
+    border-right-width: 15px
+    border-left-width: 0
+  .timeline-panel.panel-inverted:after
+    right: auto
+    left: -14px
+    border-right-width: 14px
+    border-left-width: 0
+  li
+    .timeline-panel
+      text-align: right
+      padding: 10px
+    img
+      margin: 3px
+      display: inline-block
+  li.timeline-inverted .timeline-panel
+    text-align: left
+  li .timeline-panel.panel-inverted
+    text-align: left
+  
+  li.timeline-love
+    .timeline-panel
+      color: #d9534f !important
+      background: transparent
+      box-shadow: none
+      border: none
+      &:after
+        border-color: transparent
+      &:before
+        border-color: transparent

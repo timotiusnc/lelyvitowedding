@@ -11,7 +11,7 @@ angular.module('lelyvitoweddingApp')
     return {
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-        $.backstretch("images/save-lg.jpg");
+        //$.backstretch("images/save-lg.jpg");
         
         var goToTop = $('#go-top');
         $(window).scroll(function() {
