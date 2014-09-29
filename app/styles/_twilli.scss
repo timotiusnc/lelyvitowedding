@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
     color: $foreground-color;
     background: $background-color;
     width:100%;
@@ -45,10 +45,10 @@ p a:hover {
 }
 
 strong {
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
 }
 em {
-    font-family: 'open_sansitalic', 'Open Sans', sans-serif;
+    font-family: 'open_sansitalic', $base-font, sans-serif;
 }
 
 h1,
@@ -63,7 +63,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
 }
 
 p {
@@ -114,7 +114,7 @@ dl {
     margin-top:2em;
 }
 dt {
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
 }
 
 /* -------------- Bootstrap Tables ----------------- */
@@ -224,7 +224,7 @@ table {
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     border-radius: 0;
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
 }
 
 .btn-outline-inverse {
@@ -400,7 +400,7 @@ table {
     list-style: none;
     margin:0;
     padding:0;
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
     font-size:0.86em;
     line-height:1.05;
     text-transform: lowercase;
@@ -430,7 +430,7 @@ table {
 }
 
 #left-sidebar #main-menu > li.menu-item.active > * {
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
     font-weight: bold;
     background:rgba(0,0,0,0.15);
 }
@@ -470,7 +470,7 @@ table {
     padding:15px 5px;
     text-align: center;
     font-size:0.6em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $base-font, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #go-to-top {
@@ -576,7 +576,7 @@ table {
     margin:20px 5%;
     overflow: visible;
     min-height:1px;
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
 }
 
     @media (min-width: 768px) {
@@ -974,7 +974,7 @@ h6 {
     right:12%;
     text-align: right;
     position: absolute;
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
     font-weight: bold;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -1209,7 +1209,7 @@ h6 {
     background:#fff;
     color:#a10000;
     font-size: 0.7em;
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
     border-radius: 0;
     padding:8px 10px;
 }
@@ -1231,7 +1231,7 @@ h6 {
 
 #main-content .contact-details {
     font-size: 0.9em;
-    font-family: 'open_sansregular', 'Open Sans', sans-serif;
+    font-family: 'open_sansregular', $base-font, sans-serif;
 }
 
     @media (min-width: 768px) {
@@ -1439,7 +1439,7 @@ h6 {
     cursor: pointer;
     background:none;
     border-radius:0;
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
     font-size:0.8em;
     line-height:1;
     font-weight: normal;
@@ -1481,7 +1481,7 @@ h6 {
 
 #main-content .carousel *.title {
     font-size:2em;
-    font-family: 'open_sansbold', 'Open Sans', sans-serif;
+    font-family: 'open_sansbold', $base-font, sans-serif;
     line-height:1.1;
     color:#fff;
     margin:0.6em 0 0.7em 0;
@@ -1690,7 +1690,7 @@ h6 {
     font-size: 0.9em;
     line-height: 1.1;
     text-align: center;
-    font-family: 'open_sanslight', 'Open Sans', sans-serif;
+    font-family: 'open_sanslight', $base-font, sans-serif;
 }
 
 .owl-carousel.hide-bullets .owl-pagination {
