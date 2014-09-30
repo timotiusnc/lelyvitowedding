@@ -28,14 +28,13 @@
     <link rel="stylesheet" href="styles/lightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lato" rel="stylesheet" type="text/css">
   </head>
-  <body ng-class="[state.name, bgColor, menuColor]">
+  <body class="light-gray darker-blue" ng-class="state.name">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <llvwd-backstretch></llvwd-backstretch>
-    <llvwd-theme-changer></llvwd-theme-changer>
     <div class="background-image-overlay"></div>
 
     <div id="outer-container">
@@ -132,7 +131,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
