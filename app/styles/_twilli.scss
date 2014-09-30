@@ -462,7 +462,11 @@ table {
     padding:15px 5px;
     text-align: center;
     font-size:0.6em;
-    font-family: $base-font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#footer a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   
 }
 
 #go-to-top {
