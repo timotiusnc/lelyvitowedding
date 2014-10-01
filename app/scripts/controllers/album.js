@@ -10,7 +10,7 @@
 angular.module('lelyvitoweddingApp')
   .controller('AlbumCtrl', function ($scope) {
     $scope.images = [];
-    for(var i=1; i<=26; ++i) {
+    for(var i=1; i<=49; ++i) {
       $scope.images.push(i);
     }
   });
