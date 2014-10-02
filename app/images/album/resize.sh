@@ -1,7 +1,7 @@
 #!/bin/sh
 
-i=27
-for file in /media/timotiusnc/3D84C2D53AF44CDF/MusicVidsPics/Pictures/Lely/Tambahan/*
+i=50
+for file in /media/timotiusnc/3D84C2D53AF44CDF/MusicVidsPics/Pictures/Lely/Ketiga/*
 do
  # do something on $file
  # convert $file -resize 66 gallery_sm_${i}.jpg
